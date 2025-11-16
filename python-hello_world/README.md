@@ -1,5 +1,9 @@
-#7. Easter Egg
+#4. Play with strings
 mandatory
-Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.
+Score: 0.00% (Checks completed 0.00%)
+Complete this source code to print Welcome to Holberton School!
 
-Your script should be maximum 98 characters long (please check with wc -m 9-easter_egg.py)s
+You can find the source code here
+You are not allowed to use any loops or conditional statements.
+You have to use the variables str1 and str2 in your new line of code
+Your program should be exactly 5 lines long
