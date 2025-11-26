@@ -1,10 +1,7 @@
 #!/usr/bin/python3
+"""Defines an empty Rectangle class."""
 
-
-'''
-this is documentation 
-task1 zirtpirt
-'''
 
 class Rectangle:
+    """Empty class that defines a rectangle."""
     pass
