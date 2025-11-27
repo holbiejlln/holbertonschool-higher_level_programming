@@ -21,7 +21,7 @@ class Rectangle:
 
         Args:
             width (int, optional): Düzbucaqlının eni. Varsayılan olaraq 0.
-            height (int, optional): Düzbucaqlının hündürlüyü. Varsayılan olaraq 0.
+            height (int, optional): Düzbucaqlının hündürsayılan olaraq 0.
         """
         self.width = width
         self.height = height
