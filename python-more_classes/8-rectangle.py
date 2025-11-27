@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
 Bu modul, düzbucaqlı (Rectangle) təyin edən bir sinif ehtiva edir.
-7-ci task üçün vizual təsvir simvolunu idarə etmək üçün print_symbol
-sinif atributu əlavə edilmişdir.
+8-ci task üçün düzbucaqlıları sahəsinə görə müqayisə edən
+bigger_or_equal static metodu əlavə edilmişdir.
 """
 
 
@@ -79,12 +79,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
 
-        # print_symbol-un simvol dəyərini əldə etmək üçün str() istifadə edirik.
-        # Bu, simvolun hər hansı bir tipdən (list, tuple, int və s.) olmasına
-        # baxmayaraq string təkrarının işləməsini təmin edir.
         symbol = str(self.print_symbol)
-
-        # Hər bir sətirdə 'width' qədər symbol simvolu
         line = symbol * self.__width
         return "\n".join([line for i in range(self.__height)])
 
@@ -100,3 +95,28 @@ class Rectangle:
         """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """
+        Sahəsinə əsasən iki düzbucaqlıdan ən böyüyünü qaytarır.
+        Əgər sahələr bərabərdirsə, rect_1 qaytarılır.
+
+        Args:
+            rect_1 (Rectangle): Birinci düzbucaqlı instansiyası.
+            rect_2 (Rectangle): İkinci düzbucaqlı instansiyası.
+
+        Raises:
+            TypeError: Əgər arqumentlər Rectangle instansiyası deyilsə.
+
+        Returns:
+            Rectangle: Ən böyük (və ya bərabər) düzbucaqlı instansiyası.
+        """
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        return rect_2
